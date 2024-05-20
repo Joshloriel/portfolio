@@ -20,7 +20,7 @@ const Projects = () => {
             description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam necessitatibus vitae accusamus ex voluptates recusandae itaque ipsum ducimus quod, tempora, porro tenetur magnam. Pariatur assumenda illum voluptatem quas saepe dolore.",
             image: CoffeeSo,
             git: 'https://github.com/Joshloriel/CoffeeSo2000',
-            link: 'joshlorielsoportfolio.netlify.app',
+            link: 'http://coffeeso.netlify.app',
             position: 'left'
 
         },
@@ -51,12 +51,12 @@ const Projects = () => {
     ];
     return (
         <div> {/* Projects */}
-            <div className="bg-gray-700 min-h-[100vh] flex justify-center md:p-0" id='projects'>
-                <div className="container bg-slate-900 w-[80%] grid grid-col-1 p-5 mt-12 ">
+            <div className="bg-gray-700 h-[100%] flex justify-center md:p-0" id='projects'>
+                <div className="container bg-slate-900 w-full md:w-[80%] grid grid-col-1 p-5 mt-12 ">
                     <h1 className='text-center text-5xl font-bold mt-5 mb-10'>Projects</h1>
                     {Projects.map((proj, index) => (
                         <motion.div
-                            className={`flex justify-center items-center mb-32 p-5 rounded-lg ${proj.position == 'left' ? 'flex-row' : 'flex-row-reverse'}`}
+                            className={`flex flex-col justify-center w-[100%] items-center mb-32 p-5 rounded-lg ${proj.position == 'left' ? 'md:flex-row' : 'md:flex-row-reverse'}`}
                             key={index}
                             initial={{ x: proj.position === 'left' ? 500 : -500, opacity: 0 }}
                             whileInView={{ opacity: 1, x: 0 }}

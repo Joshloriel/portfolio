@@ -10,7 +10,7 @@ import {
 } from "./../components/ui/carousel"
 import { motion } from 'framer-motion'
 import { AiFillFacebook, AiFillGoogleCircle, AiFillGithub, AiOutlineCreditCard, AiFillEye, AiFillFolder } from "react-icons/ai";
-
+import MA from "./../assets/ma.png"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./../components/ui/card"
 const Projects = () => {
     const Projects = [
@@ -25,11 +25,11 @@ const Projects = () => {
 
         },
         {
-            title: "2",
-            language: 'MySQL',
-            description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam necessitatibus vitae accusamus ex voluptates recusandae itaque ipsum ducimus quod, tempora, porro tenetur magnam. Pariatur assumenda illum voluptatem quas saepe dolore.",
-            image: '',
-            link: '',
+            title: "MovieLor",
+            language: 'Reactjs',
+            description: "TMDB Clone",
+            image: MA,
+            link: 'http://movielor.netlify.app',
             position: 'right'
         },
         {

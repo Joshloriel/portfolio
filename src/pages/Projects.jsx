@@ -19,7 +19,8 @@ const Projects = () => {
             language: 'PHP',
             description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam necessitatibus vitae accusamus ex voluptates recusandae itaque ipsum ducimus quod, tempora, porro tenetur magnam. Pariatur assumenda illum voluptatem quas saepe dolore.",
             image: CoffeeSo,
-            link: 'https://github.com/Joshloriel/CoffeeSo2000',
+            git: 'https://github.com/Joshloriel/CoffeeSo2000',
+            link: 'joshlorielsoportfolio.netlify.app',
             position: 'left'
 
         },

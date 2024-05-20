@@ -78,9 +78,9 @@ const Skills = () => {
                 </div>
             </div>
 
-            <div className="p-3 min-h-[80vh] bg-slate-700 flex justify-between">
+            <div className="p-3 min-h-[80vh] bg-slate-700 grid md:grid-cols-4 gap-3 grid-cols-1">
                 {Expertise.map((item, index) => (
-                    <div className="border rounded-lg py-10 px-3 w-[23%] text-center cursor-pointer hover:bg-slate-800" key={index}>
+                    <div className="border rounded-lg py-10 px-3 w-[100%] text-center cursor-pointer hover:bg-slate-800" key={index}>
                         <p className='text-3xl font-bold d-block h-20 mb-7'>{item.title}</p>
                         <p>{item.description}</p>
                     </div>

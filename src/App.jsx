@@ -17,15 +17,15 @@ function App() {
 
         },
         {
-          path: 'skills',
+          path: '/pages/skills',
           element: <Skills />
         },
         {
-          path: 'projects',
+          path: '/pages/projects',
           element: <Projects />
         },
         {
-          path: 'contact',
+          path: '/pages/contact',
           element: <Contact />
         },
       ]

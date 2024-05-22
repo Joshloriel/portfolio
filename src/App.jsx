@@ -1,10 +1,10 @@
-import { useState } from 'react'
-import Core from './Core'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
-import CoreLayout from './CoreLayout'
-import Skills from './pages/Skills'
-import Projects from './pages/Projects'
-import Contact from './pages/Contact'
+import { useState } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import CoreLayout from './CoreLayout';
+import Skills from './pages/Skills';
+import Projects from './pages/Projects';
+import Contact from './pages/Contact';
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -14,30 +14,28 @@ function App() {
         {
           path: '/',
           element: <Core />
-
         },
         {
-          path: '/pages/skills',
+          path: '/skills', // Absolute path
           element: <Skills />
         },
         {
-          path: '/pages/projects',
+          path: '/projects', // Absolute path
           element: <Projects />
         },
         {
-          path: '/pages/contact',
+          path: '/contact', // Absolute path
           element: <Contact />
         },
       ]
     },
-
-  ])
+  ]);
 
   return (
     <>
       <RouterProvider router={router} />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

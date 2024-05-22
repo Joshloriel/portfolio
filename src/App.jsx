@@ -4,6 +4,7 @@ import CoreLayout from './CoreLayout';
 import Skills from './pages/Skills';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Core from './Core';
 
 function App() {
   const router = createBrowserRouter([

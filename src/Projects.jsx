@@ -55,10 +55,10 @@ const Projects = () => {
                 <div className="container bg-slate-900 w-full md:w-[80%] grid grid-col-1 p-5 mt-12 ">
                     <h1 className='text-center text-5xl font-bold mt-5 mb-10'>Projects</h1>
                     {Projects.map((proj, index) => (
-                        <>
+                        <div key={index}>
                             <motion.div
                                 className={`hover:bg-slate-700 hover:shadow-md hidden md:flex flex-col hover:shadow-cyan-400 mt-20 hover:border-4 hover:border-cyan-400 justify-between w-[100%] items-center mb-32 p-5 rounded-lg ${proj.position == 'left' ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                                key={index}
+
                                 initial={{ x: proj.position === 'left' ? 500 : -500, opacity: 0 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 transition={{ duration: 1 }}
@@ -87,11 +87,7 @@ const Projects = () => {
 
                             <div
                                 className="hover:bg-slate-700 hover:shadow-md block md:hidden hover:shadow-cyan-400 mt-20 hover:border-4 hover:border-cyan-400 justify-between items-center w-full mb-32 p-5 rounded-lg"
-                                key={index}
-                                initial={{ x: proj.position === 'left' ? 500 : -500, opacity: 0 }}
-                                whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ duration: 1 }}
-                                duration={2}
+
                             >
                                 <img src={proj.image} alt={proj.title} className='w-full h-auto rounded-sm' />
                                 <div className="px-4 flex flex-col text-center">
@@ -105,7 +101,7 @@ const Projects = () => {
                                 </div>
                             </div>
 
-                        </>
+                        </div>
                     )
                     )}
 

@@ -12,6 +12,8 @@ import { AiFillFacebook, AiFillGoogleCircle, AiFillGithub, AiOutlineCreditCard }
 import bg from './assets/pbg.jpg'
 import CoreForm from './CoreForm'
 import { useTypewriter, Cursor } from 'react-simple-typewriter'
+import Projects from './Projects'
+import Skills from './Skills'
 
 
 const Core = () => {
@@ -43,7 +45,7 @@ const Core = () => {
 
                 }}
                 id='profile'
-                className="mt-4 overflow-auto md:h-[88.8vh] h-[100vh] bg-gradient-to-r from-cyan-300 to-blue-700"
+                className="mt-4 overflow-auto md:h-[100vh] h-[100vh] bg-gradient-to-r from-cyan-300 to-blue-700"
             >
                 <div
                     style={{
@@ -55,16 +57,16 @@ const Core = () => {
                         backdropFilter: 'blur(4px)',
                         WebkitBackdropFilter: 'blur(8px)',
                     }}
-                    className='flex items-center justify-center'
+                    className='flex items-center justify-center p-5'
                 >
                     <div
-                        className=" w-full md:overflow-y-hidden overflow-y-auto pb-10 md:w-[60%]  md:h-[70vh] h-[100%] relative bg-slate-800  ">
+                        className=" w-full md:overflow-y-hidden overflow-x-hidden overflow-y-auto pb-10 md:w-[60%]  md:h-[70vh] h-[100%] relative bg-slate-800  ">
                         <div className="md:grid md:grid-cols-5 rounded-lg">
                             <div className="h-full p-5 col-span-2">
                                 <img src={Josh} alt="josh" className="m-auto w-full h-[100%] rounded-xl" />
                             </div>
-                            <div className="text-center p-10 col-span-3">
-                                <p className="text-4xl font-bold capitalize text-center md:text-start">
+                            <div className="text-center p-10 col-span-3 flex flex-col justify-between">
+                                <p className="text-4xl font-bold capitalize text-center md:text-start h-14 whitespace-nowrap">
                                     <span className="text-blue-500">{title}<Cursor /></span>
                                 </p>
                                 <p className="text-md md:w-full md:text-start text-center my-3">
@@ -94,6 +96,7 @@ const Core = () => {
 
 
             </div>
+            <Skills />
         </div >
     )
 }

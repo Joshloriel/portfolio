@@ -5,7 +5,6 @@ import Skills from './Skills';
 import Projects from './Projects';
 import Contact from './Contact';
 import Core from './Core';
-
 function App() {
   const router = createBrowserRouter([
     {

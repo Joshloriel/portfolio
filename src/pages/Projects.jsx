@@ -86,7 +86,7 @@ const Projects = () => {
                             </motion.div>
 
                             <div
-                                className="hover:bg-slate-700 hover:shadow-md hover:shadow-cyan-400 mt-20 hover:border-4 hover:border-cyan-400 flex flex-col justify-between items-center w-full mb-32 p-5 rounded-lg"
+                                className="hover:bg-slate-700 hover:shadow-md block md:hidden hover:shadow-cyan-400 mt-20 hover:border-4 hover:border-cyan-400 justify-between items-center w-full mb-32 p-5 rounded-lg"
                                 key={index}
                                 initial={{ x: proj.position === 'left' ? 500 : -500, opacity: 0 }}
                                 whileInView={{ opacity: 1, x: 0 }}

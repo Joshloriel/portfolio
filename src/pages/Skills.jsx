@@ -32,39 +32,32 @@ const Skills = () => {
         }
     ];
 
-    const Skills = [
+    const ProgrammingLanguages = [
         { language: 'HTML', image: Html, position: 'left' },
         { language: 'CSS', image: Css, position: 'right' },
         { language: 'PHP', image: Php, position: 'left' },
         { language: 'JavaScript', image: JavaScript, position: 'right' },
         { language: 'Reactjs', image: Reactjs, position: 'left' },
         { language: 'React Native', image: Reactjs, position: 'right' },
-        { language: 'MySql', image: Mysql, position: 'left' },
+        { language: 'MySQL', image: Mysql, position: 'left' },
         { language: 'Laravel', image: Laravel, position: 'right' },
         { language: 'Flutter', image: Flutter, position: 'left' },
-        { language: 'Tailwindcss', image: Tailwindcss, position: 'right' },
-        { language: 'Bootstrap5', image: Bootstrap, position: 'left' },
+        { language: 'Tailwind CSS', image: Tailwindcss, position: 'right' },
+        { language: 'Bootstrap', image: Bootstrap, position: 'left' },
     ];
 
     return (
         <>
-            <div className='text-center pt-20 bg-slate-700 text-5xl font-bold  pb-5 uppercase block' id='skills'>Expertise</div>
-            <div className="min-h-96 bg-slate-700 flex justify-center">
-                <div className="w-[100vw] ps-4 mb-6">
+            <div className='text-center pt-20 bg-slate-700 text-5xl font-bold pb-5 uppercase block' id='skills'>Expertise</div>
+            <div className="min-h-[50vh] bg-slate-700 flex justify-center">
+                <div className="w-full px-4 mb-6">
                     <div className="grid grid-cols-2 md:grid-cols-6 gap-1 md:gap-2 md:px-2 mt-20">
-                        {Skills.map((item, index) => (
+                        {ProgrammingLanguages.map((item, index) => (
                             <motion.div key={index}
-                                // initial={{ opacity: 0, y: 300 }}
-                                // whileInView={{ opacity: 1, y: 0 }}
-                                // viewport={{ once: false }}
                                 initial={{ opacity: 0 }}
                                 animate={{ y: -50, opacity: 1 }}
-                                transition={{
-                                    ease: "linear",
-                                    duration: 2,
-                                }}
-                                className={` 
-                                `}
+                                transition={{ ease: "linear", duration: 2 }}
+                                className="w-full md:w-auto"
                             >
                                 <Card className="bg-slate-700 cursor-pointer text-white hover:border-slate-800 hover:bg-slate-600 h-40 w-40 overflow-hidden hover:scale-105 hover:shadow-lg duration-300 ease-in-out hover:shadow-emerald-300">
                                     <p className='px-3'>{item.language}</p>
@@ -78,10 +71,10 @@ const Skills = () => {
                 </div>
             </div>
 
-            <div className="p-3 min-h-[80vh] bg-slate-700 grid md:grid-cols-4 gap-3 grid-cols-1">
+            <div className="p-3 min-h-[60vh] bg-slate-700 grid md:grid-cols-4 gap-5 grid-cols-1">
                 {Expertise.map((item, index) => (
-                    <div className="border rounded-lg py-10 px-3 w-[100%] text-center cursor-pointer hover:bg-slate-800" key={index}>
-                        <p className='text-3xl font-bold d-block h-20 mb-7'>{item.title}</p>
+                    <div className="border rounded-lg py-10 px-3 w-full text-center cursor-pointer hover:bg-slate-800" key={index}>
+                        <p className='text-3xl font-bold h-20 mb-7'>{item.title}</p>
                         <p>{item.description}</p>
                     </div>
                 ))}

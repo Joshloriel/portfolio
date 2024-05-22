@@ -9,15 +9,15 @@ const Menu = [
     },
     {
         title: "Skills",
-        link: "/skills"
+        link: "/skills/"
     },
     {
         title: "Projects",
-        link: "/projects"
+        link: "/projects/"
     },
     {
         title: 'Contact',
-        link: '/contact'
+        link: '/contact/'
 
     }
 ];

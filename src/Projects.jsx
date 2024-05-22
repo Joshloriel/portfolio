@@ -1,5 +1,5 @@
 import React from 'react'
-import CoffeeSo from './../assets/coffeeso.png'
+import CoffeeSo from './assets/coffeeso.png'
 import { Link } from 'react-router-dom'
 import {
     Carousel,
@@ -7,11 +7,11 @@ import {
     CarouselItem,
     CarouselNext,
     CarouselPrevious,
-} from "./../components/ui/carousel"
+} from "./components/ui/carousel"
 import { motion } from 'framer-motion'
 import { AiFillFacebook, AiFillGoogleCircle, AiFillGithub, AiOutlineCreditCard, AiFillEye, AiFillFolder, AiOutlineEye } from "react-icons/ai";
-import MA from "./../assets/ma.png"
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./../components/ui/card"
+import MA from "./assets/ma.png"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./components/ui/card"
 const Projects = () => {
     const Projects = [
         {

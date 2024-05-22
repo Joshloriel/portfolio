@@ -1,16 +1,16 @@
 import React from 'react';
-import Html from './../assets/html.png';
-import Css from './../assets/css.png';
-import Bootstrap from './../assets/bootstrap.png';
-import Laravel from './../assets/laravel.png';
-import Flutter from './../assets/flutter.png';
-import Mysql from './../assets/Mysql.png';
-import Tailwindcss from './../assets/tailwindcss.png';
-import Reactjs from './../assets/reactjs.png';
-import Php from './../assets/php.png';
-import JavaScript from './../assets/JavaScript.png';
+import Html from './assets/html.png';
+import Css from './assets/css.png';
+import Bootstrap from './assets/bootstrap.png';
+import Laravel from './assets/laravel.png';
+import Flutter from './assets/flutter.png';
+import Mysql from './assets/Mysql.png';
+import Tailwindcss from './assets/tailwindcss.png';
+import Reactjs from './assets/reactjs.png';
+import Php from './assets/php.png';
+import JavaScript from './assets/JavaScript.png';
 import { motion } from 'framer-motion';
-import { Card, CardContent } from "./../components/ui/card";
+import { Card, CardContent } from "./components/ui/card";
 
 const Skills = () => {
     const Expertise = [

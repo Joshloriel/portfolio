@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import CoreLayout from './CoreLayout';
-import Skills from './pages/Skills';
-import Projects from './pages/Projects';
-import Contact from './pages/Contact';
+import Skills from './Skills';
+import Projects from './Projects';
+import Contact from './Contact';
 import Core from './Core';
 
 function App() {

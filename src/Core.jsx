@@ -1,6 +1,7 @@
 import React from 'react'
-import CoreLayout from './CoreLayout'
 import Josh from "./assets/josh.jpg"
+import BG from "./assets/pbg.jpg"
+
 import { Link } from 'react-router-dom'
 
 import { motion } from 'framer-motion'
@@ -35,10 +36,10 @@ const Core = () => {
                 style={{
                     position: 'relative',
                     overflow: 'hidden',
-                    // background: `url(${bg})`,
-                    // backgroundSize: 'cover',
-                    // backgroundRepeat: 'no-repeat',
-                    // backgroundPosition: 'center',
+                    background: `url(${bg})`,
+                    backgroundSize: 'cover',
+                    backgroundRepeat: 'no-repeat',
+                    backgroundPosition: 'center',
 
                 }}
                 id='profile'
@@ -57,14 +58,12 @@ const Core = () => {
                     className='flex items-center justify-center'
                 >
                     <div
-                        className=" w-full md:w-[60%] pb-5 md:h-[70vh] h-full relative bg-slate-800 md:rounded-xl 
-  "
-                    >
-                        <div className="md:grid md:grid-cols-2 rounded-lg">
-                            <div className="h-full p-5">
-                                <img src={Josh} alt="josh" className="m-auto md:h-[60%] h-[45vh] rounded-xl" />
+                        className=" w-full md:overflow-y-hidden overflow-y-auto pb-10 md:w-[60%]  md:h-[70vh] h-[100%] relative bg-slate-800  ">
+                        <div className="md:grid md:grid-cols-5 rounded-lg">
+                            <div className="h-full p-5 col-span-2">
+                                <img src={Josh} alt="josh" className="m-auto w-full h-[100%] rounded-xl" />
                             </div>
-                            <div className="text-center p-10">
+                            <div className="text-center p-10 col-span-3">
                                 <p className="text-4xl font-bold capitalize text-center md:text-start">
                                     <span className="text-blue-500">{title}<Cursor /></span>
                                 </p>
@@ -84,7 +83,7 @@ const Core = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="gap-4 text-center absolute bottom-[10px] left-[40%]">
+                        <div className="gap-4 text-center ">
                             <Link to="contact" className="bg-slate-900 py-2 px-3 rounded-md transform hover:scale-105 duration-300 ease-in-out shadow-md hover:shadow-emerald-300">Email me!</Link>
                             <Button className="transform hover:scale-105 duration-300 ease-in-out shadow-md hover:shadow-emerald-300 ms-3">Resume</Button>
                         </div>

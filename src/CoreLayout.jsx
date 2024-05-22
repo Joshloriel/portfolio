@@ -36,31 +36,36 @@ const Drawer = ({ children }) => {
     };
 
     return (
-        <div>
+        <div className='relative'>
             <button
-                className="me-6 mt-4 hover:scale-110 ease-in-out delay-150"
+                className="me-6 mt-4 hover:scale-110 transition-transform duration-300 ease-in-out"
                 onClick={toggleDrawer}
             >
                 <img src={MenuIcon} alt="menu" width={40} />
             </button>
 
-            <Transition in={isOpen} timeout={300} classNames="slide">
+            <Transition in={isOpen} timeout={300} unmountOnExit>
                 {(state) => (
-                    <div className={`fixed inset-y-0 right-0 w-9/12 rounded-s-xl bg-slate-800 overflow-y-auto shadow-md z-50 transition-transform transform ${state === "entered" ? "translate-x-0" : "translate-x-full"}`}>
+                    <div
+                        className={`fixed inset-y-0 right-0 w-full bg-slate-800 overflow-y-auto shadow-lg z-50 transform transition-transform duration-300 ease-in-out
+                    ${state === "entered" ? "translate-x-0" : "translate-x-full"}`}
+                    >
                         <div className="px-6 py-4 flex items-center justify-between">
                             <h2 className="text-4xl font-bold text-gray-100">Portfolio</h2>
                             <button
-                                className="text-white hover:text-gray-500 focus:outline-none text-2xl font-bold"
+                                className="text-white hover:text-gray-500 focus:outline-none text-2xl font-bold transition-colors duration-300 ease-in-out"
                                 onClick={toggleDrawer}
                             >
-                                X
+                                &times;
                             </button>
                         </div>
-
                         <div className="px-6 py-4">
-                            <hr className=" mb-5" />
+                            <hr className="mb-5 border-gray-600" />
                             {children}
                         </div>
+                        <footer className=" text-white text-center py-4 w-full absolute bottom-0 bg-slate-900">
+                            <div>&copy; 2024 @joshlorielsoo. All rights reserved.</div>
+                        </footer>
                     </div>
                 )}
             </Transition>

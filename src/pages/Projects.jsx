@@ -9,14 +9,14 @@ import {
     CarouselPrevious,
 } from "./../components/ui/carousel"
 import { motion } from 'framer-motion'
-import { AiFillFacebook, AiFillGoogleCircle, AiFillGithub, AiOutlineCreditCard, AiFillEye, AiFillFolder } from "react-icons/ai";
+import { AiFillFacebook, AiFillGoogleCircle, AiFillGithub, AiOutlineCreditCard, AiFillEye, AiFillFolder, AiOutlineEye } from "react-icons/ai";
 import MA from "./../assets/ma.png"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "./../components/ui/card"
 const Projects = () => {
     const Projects = [
         {
             title: "CoffeSo",
-            language: 'PHP',
+            language: 'Tools used: Reactjs, Bootstrap, CSS',
             description: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam necessitatibus vitae accusamus ex voluptates recusandae itaque ipsum ducimus quod, tempora, porro tenetur magnam. Pariatur assumenda illum voluptatem quas saepe dolore.",
             image: CoffeeSo,
             git: 'https://github.com/Joshloriel/CoffeeSo2000',
@@ -26,8 +26,8 @@ const Projects = () => {
         },
         {
             title: "MovieLor",
-            language: 'Reactjs',
-            description: "TMDB Clone",
+            language: 'Tools used: Reactjs, TMDB Api, Swiper, TailwindCss, Shadcn',
+            description: "TMDB Clone: View Popular and Latest TV Shows and Movies",
             image: MA,
             link: 'http://movielor.netlify.app',
             position: 'right'
@@ -55,48 +55,60 @@ const Projects = () => {
                 <div className="container bg-slate-900 w-full md:w-[80%] grid grid-col-1 p-5 mt-12 ">
                     <h1 className='text-center text-5xl font-bold mt-5 mb-10'>Projects</h1>
                     {Projects.map((proj, index) => (
-                        <motion.div
-                            className={`flex flex-col justify-center w-[100%] items-center mb-32 p-5 rounded-lg ${proj.position == 'left' ? 'md:flex-row' : 'md:flex-row-reverse'}`}
-                            key={index}
-                            initial={{ x: proj.position === 'left' ? 500 : -500, opacity: 0 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 1 }}
-                            duration={2}
-                        >
-                            <img src={proj.image} alt={proj.title} className='w-[20rem] h-[20rem] rounded-sm' />
-                            <div className="px-10">
-                                <div className='flex justify-between'>
+                        <>
+                            <motion.div
+                                className={`hover:bg-slate-700 hover:shadow-md hidden md:flex flex-col hover:shadow-cyan-400 mt-20 hover:border-4 hover:border-cyan-400 justify-between w-[100%] items-center mb-32 p-5 rounded-lg ${proj.position == 'left' ? 'md:flex-row' : 'md:flex-row-reverse'}`}
+                                key={index}
+                                initial={{ x: proj.position === 'left' ? 500 : -500, opacity: 0 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1 }}
+                                duration={2}
+                            >
+                                <img src={proj.image} alt={proj.title} className='w-[20rem] h-[20rem] rounded-sm' />
+                                <div className="px-10 first-letter:flex flex-col">
                                     <p className='text-5xl mb-4'>{proj.title} </p>
-                                    <a href={proj.link} className='bg-slate-700 mt-5 px-3 hover:bg-slate-800 hover:border rounded-md'><AiFillFolder fontSize={40} color='#71bfcc' /></a>
-                                </div>
-                                <p>
-                                    {proj.description}
-                                </p>
 
+                                    <p>
+                                        {proj.description}
+                                    </p>
+                                    <p className='mt-3'>
+                                        {proj.language}.
+                                    </p>
+                                    <div className="flex mt-5 w-[20rem]">
+                                        <a href={proj.link} className=''><AiOutlineEye fontSize={40} color='#71bfcc' /></a>
+
+                                        <a href={proj.git}><AiFillFolder fontSize={40} color='#71bfcc' /></a>
+
+
+                                    </div>
+
+                                </div>
+                            </motion.div>
+
+                            <div
+                                className="hover:bg-slate-700 hover:shadow-md hover:shadow-cyan-400 mt-20 hover:border-4 hover:border-cyan-400 flex flex-col justify-between items-center w-full mb-32 p-5 rounded-lg"
+                                key={index}
+                                initial={{ x: proj.position === 'left' ? 500 : -500, opacity: 0 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ duration: 1 }}
+                                duration={2}
+                            >
+                                <img src={proj.image} alt={proj.title} className='w-full h-auto rounded-sm' />
+                                <div className="px-4 flex flex-col text-center">
+                                    <p className='text-2xl mb-4'>{proj.title}</p>
+                                    <p>{proj.description}</p>
+                                    <p className='mt-3'>{proj.language}</p>
+                                    <div className="flex justify-center mt-5 w-full">
+                                        <a href={proj.link} className='mr-3'><AiOutlineEye fontSize={40} color='#71bfcc' /></a>
+                                        <a href={proj.git}><AiFillFolder fontSize={40} color='#71bfcc' /></a>
+                                    </div>
+                                </div>
                             </div>
-                        </motion.div>
+
+                        </>
                     )
                     )}
-                    {/* <Carousel className=" md:max-w-6xl w-[280px] md:w-full">
-                        <CarouselContent className="-ml-1">
-                            {Projects.map((proj, index) => (
-                                <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/3">
-                                    <div className="p-1 py-5">
-                                        <a href={proj.link}>
-                                            <Card>
-                                                <CardContent className="flex aspect-square items-center flex-col p-5 justify-center h-[20rem] w-full overflow-hidden">
-                                                    <p className="text-2xl font-semibold">{proj.title}</p>
-                                                    <p>{proj.description}</p>
-                                                </CardContent>
-                                            </Card>
-                                        </a>
-                                    </div>
-                                </CarouselItem>
-                            ))}
-                        </CarouselContent>
-                        <CarouselPrevious />
-                        <CarouselNext />
-                    </Carousel> */}
+
                 </div>
             </div>
         </div>

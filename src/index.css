@@ -1,86 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 @tailwind base;
-  @tailwind components;
-  @tailwind utilities;
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+@tailwind components;
+@tailwind utilities;
 
-  @layer base {
-    :root {
-      --background: 0 0% 100%;
-      --foreground: 222.2 84% 4.9%;
+:root {
+  /* IDE-inspired dark theme - Dracula/One Dark hybrid */
+  --bg-primary: #1e1e2e;
+  --bg-secondary: #252538;
+  --bg-tertiary: #2a2a3d;
+  --bg-card: #313244;
+  
+  /* Accent colors - vibrant cyan/blue */
+  --accent-primary: #89b4fa;
+  --accent-secondary: #74c7ec;
+  --accent-glow: rgba(137, 180, 250, 0.3);
+  
+  /* Text colors */
+  --text-primary: #cdd6f4;
+  --text-secondary: #a6adc8;
+  --text-muted: #6c7086;
+  
+  /* UI elements */
+  --border-color: #45475a;
+  --success: #a6e3a1;
+  --warning: #fab387;
+  --error: #f38ba8;
+  
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, #89b4fa 0%, #74c7ec 50%, #94e2d5 100%);
+  --gradient-glow: linear-gradient(135deg, rgba(137, 180, 250, 0.2) 0%, rgba(116, 199, 236, 0.1) 100%);
+}
 
-      --card: 0 0% 100%;
-      --card-foreground: 222.2 84% 4.9%;
+* {
+  font-family: "JetBrains Mono", "Fira Code", monospace;
+  scroll-behavior: smooth;
+}
 
-      --popover: 0 0% 100%;
-      --popover-foreground: 222.2 84% 4.9%;
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+}
 
-      --primary: 222.2 47.4% 11.2%;
-      --primary-foreground: 210 40% 98%;
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
 
-      --secondary: 210 40% 96.1%;
-      --secondary-foreground: 222.2 47.4% 11.2%;
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
 
-      --muted: 210 40% 96.1%;
-      --muted-foreground: 215.4 16.3% 46.9%;
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
 
-      --accent: 210 40% 96.1%;
-      --accent-foreground: 222.2 47.4% 11.2%;
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
 
-      --destructive: 0 84.2% 60.2%;
-      --destructive-foreground: 210 40% 98%;
+/* Selection color */
+::selection {
+  background: var(--accent-primary);
+  color: var(--bg-primary);
+}
 
-      --border: 214.3 31.8% 91.4%;
-      --input: 214.3 31.8% 91.4%;
-      --ring: 222.2 84% 4.9%;
-
-      --radius: 0.5rem;
-    }
-
-    .dark {
-      --background: 222.2 84% 4.9%;
-      --foreground: 210 40% 98%;
-
-      --card: 222.2 84% 4.9%;
-      --card-foreground: 210 40% 98%;
-
-      --popover: 222.2 84% 4.9%;
-      --popover-foreground: 210 40% 98%;
-
-      --primary: 210 40% 98%;
-      --primary-foreground: 222.2 47.4% 11.2%;
-
-      --secondary: 217.2 32.6% 17.5%;
-      --secondary-foreground: 210 40% 98%;
-
-      --muted: 217.2 32.6% 17.5%;
-      --muted-foreground: 215 20.2% 65.1%;
-
-      --accent: 217.2 32.6% 17.5%;
-      --accent-foreground: 210 40% 98%;
-
-      --destructive: 0 62.8% 30.6%;
-      --destructive-foreground: 210 40% 98%;
-
-      --border: 217.2 32.6% 17.5%;
-      --input: 217.2 32.6% 17.5%;
-      --ring: 212.7 26.8% 83.9%;
-    }
+/* Utility classes */
+@layer components {
+  .glass-card {
+    @apply backdrop-blur-xl bg-opacity-20 border border-white/10 rounded-2xl shadow-xl;
   }
-
-  * {
-    font-family: "Fira Code", monospace;
-    font-weight: 300;
-    scroll-behavior: smooth;
-
+  
+  .glow-effect {
+    box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow);
   }
-
-
-  @layer base {
-    * {
-      @apply border-border;
-    }
-    body {
-      @apply bg-background text-foreground;
-    }
+  
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
+  
+  .nav-link {
+    @apply relative px-4 py-2 rounded-lg transition-all duration-300 ease-out;
+  }
+  
+  .nav-link::before {
+    content: '';
+    @apply absolute inset-0 bg-gradient-to-r from-[#89b4fa] to-[#74c7ec] opacity-0 rounded-lg transition-opacity duration-300;
+  }
+  
+  .nav-link:hover::before {
+    @apply opacity-20;
+  }
+  
+  .nav-link:hover {
+    @apply text-[#89b4fa] scale-105;
+  }
+  
+  .btn-primary {
+    @apply px-6 py-3 rounded-lg font-semibold transition-all duration-300 transform hover:scale-105;
+    background: var(--gradient-primary);
+    color: var(--bg-primary);
+  }
+  
+  .btn-primary:hover {
+    box-shadow: 0 0 20px var(--accent-glow);
+  }
+  
+  .card-hover {
+    @apply transition-all duration-300 cursor-pointer;
+  }
+  
+  .card-hover:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 30px var(--accent-glow);
+    border-color: var(--accent-primary);
+  }
+}

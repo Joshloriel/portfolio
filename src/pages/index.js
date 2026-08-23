@@ -1,4 +1,7 @@
-export { default as Home } from './Home';
-export { default as Skills } from './Skills';
-export { default as Projects } from './Projects';
-export { default as Contact } from './Contact';
+import Home from './Home';
+import Skills from './Skills';
+import Projects from './Projects';
+import Contact from './Contact';
+import Experience from './Experience';
+
+export { Home, Skills, Projects, Contact, Experience };

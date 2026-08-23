@@ -1,41 +1,34 @@
-import { useState } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import CoreLayout from './CoreLayout';
-import Skills from './Skills';
-import Projects from './Projects';
-import Contact from './Contact';
-import Core from './Core';
-function App() {
-  const router = createBrowserRouter([
-    {
-      path: '/',
-      element: <CoreLayout />,
-      children: [
-        {
-          path: '/',
-          element: <Core />
-        },
-        {
-          path: '/skills', // Absolute path
-          element: <Skills />
-        },
-        {
-          path: '/projects', // Absolute path
-          element: <Projects />
-        },
-        {
-          path: '/contact', // Absolute path
-          element: <Contact />
-        },
-      ]
-    },
-  ]);
+import { Layout } from './components/layout';
+import { Home, Skills, Projects, Contact } from './pages';
 
-  return (
-    <>
-      <RouterProvider router={router} />
-    </>
-  );
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Layout />,
+    children: [
+      {
+        index: true,
+        element: <Home />
+      },
+      {
+        path: 'skills',
+        element: <Skills />
+      },
+      {
+        path: 'projects',
+        element: <Projects />
+      },
+      {
+        path: 'contact',
+        element: <Contact />
+      },
+    ]
+  },
+]);
+
+function App() {
+  return <RouterProvider router={router} />;
 }
 
 export default App;

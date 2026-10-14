@@ -255,7 +255,8 @@ export const PROJECTS = [
     description:
       "Enterprise platform engineered at EasyGeo Co. Ltd. supporting full smart factory frameworks including ERP, MES, SPC, POP, PLM, and SCM for real-time factory floor management and automated data flows.",
     techStack: ["React.js", "Java Spring", "PostgreSQL", "REST APIs", "Real-time SPC"],
-    image: "",
+    image: "/workstudio.png",
+    imagePosition: "object-center",
     git: "",
     link: "",
     status: "Enterprise Production (EasyGeo)",

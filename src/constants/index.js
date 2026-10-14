@@ -205,6 +205,32 @@ export const PROJECTS = [
     ]
   },
   {
+    id: "puicgs",
+    title: "PUICGS — Certificate Management Portal",
+    category: "Institutional Web App & Verification Portal",
+    badge: "Institutional Live",
+    description:
+      "Official university certificate generation and tracking platform engineered for PHINMA University of Iloilo students and administrators. Enables submitting completed duty hours, uploading verified Daily Time Record (DTR) proof, automated approval routing, and issuing verifiable serial-numbered duty certificates seamlessly.",
+    techStack: [
+      "Next.js",
+      "React",
+      "Tailwind CSS",
+      "OAuth / Google Auth",
+      "PDF Generation",
+      "REST APIs"
+    ],
+    image: "/puicgs.png",
+    git: "",
+    link: "https://puicgs.vercel.app/",
+    status: "Production Live",
+    highlights: [
+      "Official certificate generation platform for PHINMA University of Iloilo students",
+      "Restricted institutional authentication supporting @phinmaed.com student accounts",
+      "Automated student DTR proof upload, review workflows & administrative approval routing",
+      "Generates tamper-resistant, verifiable duty certificates with sequential serial numbering"
+    ]
+  },
+  {
     id: "movielor",
     title: "MovieLor",
     category: "Web Application & Entertainment API",

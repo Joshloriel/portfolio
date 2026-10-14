@@ -68,7 +68,7 @@ export const CommandPalette = ({ isOpen, onClose }) => {
     {
       id: 'projects',
       title: 'Projects.json',
-      subtitle: 'Goliath Workspace, MovieLor, WorkStudio, slom.ai',
+      subtitle: 'Goliath Workspace, PUICGS, MovieLor, WorkStudio, slom.ai',
       category: 'Files',
       action: () => navigate('/projects')
     },

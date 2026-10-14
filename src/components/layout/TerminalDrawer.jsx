@@ -51,7 +51,7 @@ export const TerminalDrawer = ({ isOpen, onToggle }) => {
   skills          - Technical competencies (React, Next.js, Java Spring, etc.)
   projects        - Featured projects & enterprise applications
   education       - University & capstone details
-  contact         - Email, phone, GitHub & socials
+  contact         - Email, phone, location & details
   cat <file>      - Read file (e.g. "cat resume", "cat experience.log")
   open <page>     - Navigate to page (profile, experience, skills, projects, contact)
   clear / cls     - Clear terminal screen
@@ -108,8 +108,7 @@ Certifications: ${PROFILE.education.certifications.join(', ')}`
           type: 'output',
           text: `Email:    ${PROFILE.email}
 Phone:    ${PROFILE.phone}
-Location: ${PROFILE.location}
-GitHub:   ${SOCIAL_LINKS.github}`
+Location: ${PROFILE.location}`
         });
         break;
 

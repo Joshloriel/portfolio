@@ -8,7 +8,6 @@ import {
   VscCopy, 
   VscSend, 
   VscMail, 
-  VscGithub, 
   VscTerminal,
   VscCallIncoming,
   VscLocation
@@ -196,23 +195,6 @@ const Contact = () => {
                   </div>
                 </div>
               </div>
-
-              <a
-                href={SOCIAL_LINKS.github}
-                target="_blank"
-                rel="noreferrer"
-                className="flex items-center gap-3 p-3.5 bg-[#161b22] border border-[#21262d] hover:border-[#38bdf8]/50 rounded-xl transition-all group shadow-md"
-              >
-                <div className="p-2 bg-[#0d1117] rounded-lg border border-[#30363d] text-[#38bdf8]">
-                  <VscGithub className="w-5 h-5" />
-                </div>
-                <div className="overflow-hidden">
-                  <div className="text-[11px] text-[#8b949e]">GitHub Profile</div>
-                  <div className="text-xs font-bold text-[#f0f6fc] group-hover:text-[#38bdf8] transition-colors truncate">
-                    github.com/Joshloriel
-                  </div>
-                </div>
-              </a>
             </div>
 
             {/* Availability Box */}

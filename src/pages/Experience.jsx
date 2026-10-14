@@ -195,6 +195,11 @@ const Experience = () => {
                 <p className="text-xs text-[#818cf8]">
                   {PROFILE.education.degree} • <span className="text-[#8b949e]">Graduated {PROFILE.education.graduated}</span>
                 </p>
+                {PROFILE.education.address && (
+                  <p className="text-[11px] text-[#656c76]">
+                    {PROFILE.education.address}
+                  </p>
+                )}
               </div>
             </div>
 

@@ -37,7 +37,7 @@ export const MENU_ITEMS = [
 ];
 
 export const SOCIAL_LINKS = {
-  github: "https://github.com/Joshloriel",
+  github: "",
   email: "mailto:joshlorielsoo@gmail.com",
   phone: "tel:+639369032114",
   rawPhone: "+63 936 903 2114",
@@ -48,25 +48,26 @@ export const SOCIAL_LINKS = {
 
 export const PROFILE = {
   name: "Josh Loriel L. So",
-  role: "Full-Stack Software Engineer",
+  role: "Software Engineer — Frontend & Full-Stack Web Development",
   status: "🟢 Available for Opportunities & Collaborations",
   location: "Iloilo City, Philippines",
   email: "joshlorielsoo@gmail.com",
   phone: "+63 936 903 2114",
   experienceYears: "2+ Years (Enterprise & International)",
-  focus: "Modern Frontend Architecture (React, Next.js), Scalable SaaS Systems & Java Spring",
+  focus: "Modern Frontend Development, User Interface Optimization & Full-Stack Web Architecture",
   summary:
-    "Full-Stack Software Engineer with a focus on modern frontend architecture and scalable SaaS systems. Expertise in React, Next.js, and Java Spring, with a proven history of delivering high-impact solutions for international startups, enterprise smart factory frameworks, and municipal digital transformation projects.",
+    "Software Engineer focused on modern frontend development, user interface optimization, and full-stack web architecture across enterprise and public-sector environments. Currently building full-stack features for smart-factory enterprise platforms at EasyGeo Co. Ltd., with prior experience delivering client-side production web applications at KaChick and municipal document tracking and emergency reporting systems for the Iloilo City Government. Combines strong proficiency in modern frontend technologies with a solid foundation in backend architecture, relational and cloud databases, and system integration.",
   highlights: [
-    { label: "Enterprise Systems", desc: "Smart factory ERP, MES, SPC, POP, PLM, SCM at EasyGeo" },
-    { label: "International Startups", desc: "Flagship frontend apps (slom.ai, trackbill.io) at KaChick HK" },
-    { label: "Gov Digital Transformation", desc: "Centralized Document Tracking & Emergency Dispatch in Iloilo" }
+    { label: "Enterprise Systems", desc: "WorkStudio smart factory platform (ERP, MES, SPC, POP, PLM, SCM) at EasyGeo Co. Ltd." },
+    { label: "International Startups", desc: "Production frontend apps (slom.ai, trackbill.io, Photospots) at KaChick HK" },
+    { label: "Gov Digital Transformation", desc: "Centralized Document Tracking, Emergency Patient Reporting & Demographics DB in Iloilo City" }
   ],
   education: {
     institution: "PHINMA University of Iloilo",
+    address: "Rizal Street, Iloilo City, Iloilo, 5000",
     degree: "Bachelor of Science in Information Technology",
     graduated: "2024",
-    capstone: "Jianzin E-Commerce Platform — Full-stack e-commerce web application with product catalog, cart state, and end-to-end checkout & order pipelines.",
+    capstone: "Jianzin E-Commerce Website (Advisor: Ryan Valeriano): Developed a web-based e-commerce platform to facilitate online customer transactions, showcase product catalogs, and streamline order management.",
     certifications: [
       "Computer System Configuration",
       "Network Setup & Diagnostics",
@@ -81,26 +82,24 @@ export const EXPERIENCES = [
     company: "EasyGeo Co. Ltd.",
     role: "Full-Stack Engineer",
     companyType: "Korean Technology Company",
-    period: "2025 – 2026",
+    period: "Jan 2025 – Present",
     badge: "Enterprise",
     highlights: [
-      "Engineered core features for WorkStudio, an enterprise platform supporting smart factory frameworks including ERP, MES, SPC, POP, PLM, and SCM.",
-      "Developed robust frontend interfaces and integrated backend APIs to streamline operational data flows and real-time factory floor management.",
-      "Collaborated with cross-functional international teams to implement scalable architecture and maintain system performance."
+      "Drive the full-stack development of the WorkStudio web platform, an enterprise system supporting smart-factory operational frameworks including ERP, MES, SPC, POP, PLM, and SCM.",
+      "Engineer and integrate frontend user interfaces and backend application features to support scalable manufacturing workflows and cross-module system integration."
     ],
-    techStack: ["React.js", "Java Spring", "PostgreSQL", "REST APIs", "Enterprise Architecture"]
+    techStack: ["React.js", "Java", "Spring", "PostgreSQL", "REST APIs", "Smart Factory / MES"]
   },
   {
     id: "kachick",
     company: "KaChick",
     role: "Software Engineering Intern",
-    companyType: "Hong Kong-Based Startup",
+    companyType: "Hong Kong–Based Startup",
     period: "2024",
     badge: "Startup / Global",
     highlights: [
-      "Contributed to client-side development for flagship products including trackbill.io, KaChick Photospots, and slom.ai (Solomon AI).",
-      "Implemented responsive user interfaces and enhanced user experience across cross-browser environments using modern frontend frameworks.",
-      "Collaborated closely with product designers and backend engineers to integrate APIs and resolve UI/UX bottlenecks."
+      "Contributed to the client-side development and frontend engineering of multiple production web platforms, including trackbill.io, Solomon (slom.ai), and KaChick Photospots.",
+      "Focused on user interface implementation, responsive frontend optimization, and interactive client-side functionality across web products."
     ],
     techStack: ["React.js", "Next.js", "Tailwind CSS", "AI Integration", "Cross-Browser UX"]
   },
@@ -108,14 +107,14 @@ export const EXPERIENCES = [
     id: "iloilo-gov",
     company: "Iloilo City Government",
     role: "Junior Programmer",
-    companyType: "Local Government Unit / Municipal",
+    companyType: "Iloilo City, Philippines",
     period: "2023 – 2024",
     badge: "Public Sector",
     highlights: [
-      "Built and optimized a centralized Document Tracking System to monitor and manage official municipal records across departments.",
-      "Co-engineered an Emergency Patient Report System to accelerate incident intake and improve emergency dispatch response times.",
-      "Designed and deployed the municipal Informal Settlers Database to organize and record demographic records for city planning.",
-      "Delivered technical support and user onboarding sessions for government staff across deployed web platforms."
+      "Contributed to the development, maintenance, and continuous enhancement of a municipal Document Tracking Web Application to streamline the routing and monitoring of official records while resolving operational issues promptly.",
+      "Collaborated on creating an Emergency Patient Report System to improve incident documentation workflows and the handling of emergency cases.",
+      "Developed the Iloilo City Informal Settlers Database to digitize, centralize, and manage community housing and demographic records.",
+      "Delivered technical support and end-user training across municipal web applications to ensure smooth system adoption and effective daily utilization."
     ],
     techStack: ["PHP", "MySQL", "JavaScript", "Bootstrap", "Government IT Systems"]
   }
@@ -123,70 +122,105 @@ export const EXPERIENCES = [
 
 export const SKILL_CATEGORIES = [
   {
-    category: "Languages & Core",
-    description: "Solid foundational and object-oriented programming competencies",
+    category: "Frontend Development",
+    description: "Responsive, optimized user interfaces & modern client architecture",
     skills: [
-      { name: "JavaScript (ES6+)", level: "Advanced", icon: "js", tag: "Core" },
+      { name: "JavaScript", level: "Advanced", icon: "js", tag: "Core" },
       { name: "TypeScript", level: "Advanced", icon: "ts", tag: "Typed" },
-      { name: "Java", level: "Advanced", icon: "java", tag: "Backend/OOP" },
-      { name: "PHP", level: "Advanced", icon: "php", tag: "Backend" },
-      { name: "HTML5", level: "Advanced", icon: "html", tag: "Markup" },
-      { name: "CSS3", level: "Advanced", icon: "css", tag: "Styling" }
-    ]
-  },
-  {
-    category: "Frontend Frameworks & UI",
-    description: "Building responsive, reactive, accessible user interfaces",
-    skills: [
       { name: "React.js", level: "Advanced", icon: "react", tag: "Framework" },
       { name: "Next.js", level: "Advanced", icon: "nextjs", tag: "Full-Stack" },
+      { name: "HTML5", level: "Advanced", icon: "html", tag: "Markup" },
+      { name: "CSS3", level: "Advanced", icon: "css", tag: "Styling" },
       { name: "Tailwind CSS", level: "Advanced", icon: "tailwind", tag: "Styling" },
       { name: "Bootstrap", level: "Advanced", icon: "bootstrap", tag: "UI Library" },
-      { name: "jQuery", level: "Proficient", icon: "jquery", tag: "Legacy/DOM" }
+      { name: "jQuery", level: "Proficient", icon: "jquery", tag: "DOM" }
     ]
   },
   {
-    category: "Backend & Systems",
-    description: "Scalable API services, microservices, and enterprise logic",
+    category: "Backend & AI Integration",
+    description: "Enterprise services, API design & conversational AI capabilities",
     skills: [
-      { name: "Java Spring", level: "Advanced", icon: "spring", tag: "Enterprise" },
       { name: "Node.js", level: "Advanced", icon: "nodejs", tag: "Runtime" },
-      { name: "RESTful APIs", level: "Advanced", icon: "api", tag: "Architecture" },
-      { name: "Laravel / PHP", level: "Advanced", icon: "laravel", tag: "Framework" }
+      { name: "PHP", level: "Advanced", icon: "php", tag: "Backend" },
+      { name: "Java", level: "Advanced", icon: "java", tag: "Backend/OOP" },
+      { name: "Spring", level: "Advanced", icon: "spring", tag: "Enterprise" },
+      { name: "AI API Integration", level: "Advanced", icon: "ai", tag: "LLM" },
+      { name: "AI-Powered Chatbot Development", level: "Advanced", icon: "ai", tag: "Conversational" }
     ]
   },
   {
-    category: "Databases & Cloud",
-    description: "Data modeling, schema design, and serverless backends",
+    category: "Databases & BaaS",
+    description: "Data modeling, relational integrity, and serverless backends",
     skills: [
       { name: "PostgreSQL", level: "Advanced", icon: "postgres", tag: "Relational" },
       { name: "MySQL", level: "Advanced", icon: "mysql", tag: "Relational" },
       { name: "MSSQL", level: "Proficient", icon: "mssql", tag: "Enterprise" },
-      { name: "Supabase", level: "Proficient", icon: "supabase", tag: "Cloud/BaaS" },
-      { name: "Firebase", level: "Proficient", icon: "firebase", tag: "Realtime" }
+      { name: "Firebase", level: "Proficient", icon: "firebase", tag: "Realtime" },
+      { name: "Supabase", level: "Proficient", icon: "supabase", tag: "Cloud/BaaS" }
     ]
   },
   {
-    category: "AI & Integrations",
-    description: "Integrating intelligent language models & automated workflows",
+    category: "Tools, Design & Agile",
+    description: "Collaboration, agile delivery, interface design & version control",
     skills: [
-      { name: "AI API Integration", level: "Advanced", icon: "ai", tag: "LLM" },
-      { name: "AI Chatbot Development", level: "Advanced", icon: "ai", tag: "Conversational" }
-    ]
-  },
-  {
-    category: "Tools & Workflow",
-    description: "Modern collaboration, project management, and version control",
-    skills: [
-      { name: "Git / GitHub", level: "Advanced", icon: "git", tag: "VCS" },
+      { name: "Git", level: "Advanced", icon: "git", tag: "VCS" },
+      { name: "GitHub", level: "Advanced", icon: "git", tag: "VCS" },
       { name: "GitLab", level: "Advanced", icon: "gitlab", tag: "CI/CD" },
       { name: "Figma", level: "Proficient", icon: "figma", tag: "UI/UX" },
-      { name: "Trello & Asana (Kanban)", level: "Advanced", icon: "kanban", tag: "Agile" }
+      { name: "Canva", level: "Proficient", icon: "figma", tag: "Design" },
+      { name: "Trello & Asana", level: "Advanced", icon: "kanban", tag: "Agile" },
+      { name: "Kanban", level: "Advanced", icon: "kanban", tag: "Methodology" },
+      { name: "Microsoft Office", level: "Proficient", icon: "log", tag: "Productivity" }
     ]
   }
 ];
 
 export const PROJECTS = [
+  {
+    id: "goliath-workspace",
+    title: "Goliath Workspace",
+    category: "Enterprise ERP / HCM & Agile Execution System",
+    badge: "Flagship SaaS",
+    description:
+      "A full-featured, multi-tenant Enterprise Resource Planning (ERP), Human Capital Management (HCM), and Agile Project Execution system. Designed for modern mid-to-large enterprises, it provides complete transparency into corporate operations, team initiatives, daily productivity logs, supply chain logistics, multi-facility warehouse inventory, and employee lifecycle management.",
+    techStack: [
+      "Next.js (App Router)",
+      "Strict TypeScript",
+      "Zod Schema Validation",
+      "Tailwind CSS",
+      "Multi-Tenant DB",
+      "Route-Level RBAC"
+    ],
+    image: "/goliath.png",
+    git: "",
+    link: "https://goliath-workspace-beta.vercel.app",
+    status: "Production Beta",
+    highlights: [
+      "Tenant Isolation: Every database record is strictly scoped to its company context (i_company), with instant tenant switching.",
+      "Agile Project Management: Kanban boards, section-grouped list views, interactive subtask checklists, and real-time activity/comment threads.",
+      "Universal Employee Workspace: Open access for all team members to collaborate on projects, track tasks, and submit daily work reports.",
+      "Granular Route-Level RBAC: Department-level permission policies dynamically regulate navigation routes and action capabilities.",
+      "Double-Entry Stock Audit Trails: All inventory mutations generate immutable ledger records with sequential tracking numbers (IN-2026-XXXX, OUT-2026-XXXX, TR-2026-XXXX).",
+      "Zero any Strict TypeScript: Built under strict compiler guarantees with 100% type-checked data contracts and Zod schema runtime validation."
+    ]
+  },
+  {
+    id: "movielor",
+    title: "MovieLor",
+    category: "Web Application & Entertainment API",
+    badge: "Featured Live",
+    description:
+      "A feature-rich TMDB cinema discovery platform. Enables exploring latest box office hits, trending television shows, categorized movie exploration, and deep media details powered by TMDB API integration.",
+    techStack: ["React.js", "TMDB API", "Tailwind CSS", "Swiper.js", "Shadcn UI"],
+    image: "/movielor.png",
+    git: "",
+    link: "https://movielorwatchtv-plum.vercel.app",
+    status: "Production Live",
+    highlights: [
+      "Seamless asynchronous data fetching from TMDB endpoints",
+      "Interactive media carousels and clean card animations"
+    ]
+  },
   {
     id: "workstudio",
     title: "WorkStudio — Smart Factory Framework",
@@ -230,46 +264,12 @@ export const PROJECTS = [
       "A comprehensive full-stack e-commerce web platform engineered with complete product catalog management, persistent cart state, user authentication, and an end-to-end checkout and order management pipeline.",
     techStack: ["React.js", "Node.js / Java", "MySQL", "Tailwind CSS", "REST APIs"],
     image: "",
-    git: "https://github.com/Joshloriel",
+    git: "",
     link: "",
     status: "Completed Capstone",
     highlights: [
       "End-to-end order processing, stock tracking, and administrative dashboard",
       "Engineered at PHINMA University of Iloilo BSIT Program"
-    ]
-  },
-  {
-    id: "coffeeso",
-    title: "CoffeeSo",
-    category: "Full Stack / E-Commerce Experience",
-    badge: "Featured",
-    description:
-      "A modern specialty coffee ordering & digital storefront built with React and interactive UI components. Features dynamic catalog filtering, product customization, and seamless cart state management.",
-    techStack: ["React.js", "Bootstrap", "Custom CSS", "Responsive UI"],
-    image: "/src/assets/coffeeso.png",
-    git: "https://github.com/Joshloriel/CoffeeSo2000",
-    link: "https://coffeeso.netlify.app",
-    status: "Production Live",
-    highlights: [
-      "Dynamic catalog filtering and real-time state calculations",
-      "Tailored mobile-first layouts with animated transitions"
-    ]
-  },
-  {
-    id: "movielor",
-    title: "MovieLor",
-    category: "Web Application & Entertainment API",
-    badge: "Featured",
-    description:
-      "A feature-rich TMDB cinema discovery platform. Enables exploring latest box office hits, trending television shows, categorized movie exploration, and deep media details powered by TMDB API integration.",
-    techStack: ["React.js", "TMDB API", "Tailwind CSS", "Swiper.js", "Shadcn UI"],
-    image: "/src/assets/ma.png",
-    git: "https://github.com/Joshloriel/MovieLor",
-    link: "https://movielor.netlify.app",
-    status: "Production Live",
-    highlights: [
-      "Seamless asynchronous data fetching from TMDB endpoints",
-      "Interactive media carousels and clean card animations"
     ]
   },
   {

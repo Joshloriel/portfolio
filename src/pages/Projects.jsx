@@ -151,7 +151,7 @@ const Projects = () => {
                       <img
                         src={proj.image}
                         alt={proj.title}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#161b22] via-transparent to-transparent opacity-80"></div>
                       <span className="absolute top-3 right-3 bg-[#0d1117]/90 backdrop-blur-md text-[#34d399] border border-[#34d399]/40 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-md">
@@ -251,7 +251,7 @@ const Projects = () => {
                         </div>
                       ) : (
                         <div className="text-[11px] text-[#656c76] italic">
-                          ℹ️ Edit constants/index.js to link your live demo & repo
+                          ℹ️ Internal / enterprise deployed platform
                         </div>
                       )}
                     </div>

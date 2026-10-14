@@ -6,7 +6,6 @@ import {
   VscSymbolInterface, 
   VscBriefcase, 
   VscMail, 
-  VscGithubAlt, 
   VscArrowRight,
   VscClose
 } from 'react-icons/vsc';
@@ -69,7 +68,7 @@ export const CommandPalette = ({ isOpen, onClose }) => {
     {
       id: 'projects',
       title: 'Projects.json',
-      subtitle: 'WorkStudio, slom.ai, Jianzin Capstone, CoffeeSo, MovieLor',
+      subtitle: 'Goliath Workspace, MovieLor, WorkStudio, slom.ai',
       category: 'Files',
       action: () => navigate('/projects')
     },
@@ -86,13 +85,6 @@ export const CommandPalette = ({ isOpen, onClose }) => {
       subtitle: 'Open developer resume in a new tab',
       category: 'Actions',
       action: () => window.open('/resume.pdf', '_blank')
-    },
-    {
-      id: 'github',
-      title: 'Open GitHub Profile',
-      subtitle: 'github.com/Joshloriel',
-      category: 'External',
-      action: () => window.open(SOCIAL_LINKS.github, '_blank')
     },
     {
       id: 'email',

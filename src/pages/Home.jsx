@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom';
 import { 
   VscCode, 
   VscEye, 
-  VscGithub, 
   VscMail, 
   VscFilePdf, 
   VscTerminal,
@@ -32,7 +31,7 @@ export interface ResumeProfile {
   name: string;
   title: string;
   location: string;
-  contacts: { email: string; phone: string; github: string };
+  contacts: { email: string; phone: string };
   summary: string;
   enterpriseRoles: string[];
   coreTech: string[];
@@ -45,17 +44,16 @@ export const engineer: ResumeProfile = {
   location: "${PROFILE.location}",
   contacts: {
     email: "${PROFILE.email}",
-    phone: "${PROFILE.phone}",
-    github: "${SOCIAL_LINKS.github}"
+    phone: "${PROFILE.phone}"
   },
   summary: "${PROFILE.summary}",
   enterpriseRoles: [
-    "EasyGeo Co. Ltd. (Korean Tech) - Full-Stack Engineer [WorkStudio Smart Factory ERP/MES]",
-    "KaChick (Hong Kong Startup) - Software Engineering Intern [slom.ai, trackbill.io]",
-    "Iloilo City Government - Junior Programmer [Document Tracking & Emergency Dispatch]"
+    "EasyGeo Co. Ltd. (Korean Tech) - Full-Stack Engineer [WorkStudio Smart Factory Platform]",
+    "KaChick (Hong Kong Startup) - Software Engineering Intern [slom.ai, trackbill.io, Photospots]",
+    "Iloilo City Government - Junior Programmer [Document Tracking & Emergency Patient Reporting]"
   ],
   coreTech: [
-    "React.js", "Next.js", "Java Spring", "TypeScript",
+    "JavaScript", "TypeScript", "React.js", "Next.js", "Java", "Spring",
     "PostgreSQL", "MySQL", "Tailwind CSS", "REST APIs"
   ],
   education: {
@@ -183,23 +181,21 @@ const Home = () => {
                   </div>
                 </div>
 
-                {/* Social icons */}
+                {/* Contact quick actions */}
                 <div className="flex gap-3 mt-3">
-                  <a
-                    href={SOCIAL_LINKS.github}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="p-2.5 bg-[#0d1117] hover:bg-[#21262d] border border-[#30363d] rounded-lg text-[#8b949e] hover:text-[#38bdf8] hover:border-[#38bdf8] transition-all"
-                    title="GitHub Profile"
-                  >
-                    <VscGithub className="w-4 h-4" />
-                  </a>
                   <a
                     href={SOCIAL_LINKS.email}
                     className="p-2.5 bg-[#0d1117] hover:bg-[#21262d] border border-[#30363d] rounded-lg text-[#8b949e] hover:text-[#38bdf8] hover:border-[#38bdf8] transition-all"
                     title="Direct Email"
                   >
                     <VscMail className="w-4 h-4" />
+                  </a>
+                  <a
+                    href={SOCIAL_LINKS.phone}
+                    className="p-2.5 bg-[#0d1117] hover:bg-[#21262d] border border-[#30363d] rounded-lg text-[#8b949e] hover:text-[#34d399] hover:border-[#34d399] transition-all"
+                    title="Phone / WhatsApp"
+                  >
+                    <VscCallIncoming className="w-4 h-4" />
                   </a>
                 </div>
               </div>

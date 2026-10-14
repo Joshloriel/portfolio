@@ -28,59 +28,51 @@ export interface SkillCategory {
 
 export const TECHNICAL_COMPETENCIES: SkillCategory[] = [
   {
-    category: "Languages & Core",
+    category: "Frontend Development",
     skills: [
-      { name: "JavaScript (ES6+)", level: "Advanced", tag: "Core" },
+      { name: "JavaScript", level: "Advanced", tag: "Core" },
       { name: "TypeScript", level: "Advanced", tag: "Typed" },
-      { name: "Java", level: "Advanced", tag: "Backend/OOP" },
-      { name: "PHP", level: "Advanced", tag: "Backend" },
-      { name: "HTML5", level: "Advanced", tag: "Markup" },
-      { name: "CSS3", level: "Advanced", tag: "Styling" }
-    ]
-  },
-  {
-    category: "Frontend Frameworks & UI",
-    skills: [
       { name: "React.js", level: "Advanced", tag: "Framework" },
       { name: "Next.js", level: "Advanced", tag: "Full-Stack" },
+      { name: "HTML5", level: "Advanced", tag: "Markup" },
+      { name: "CSS3", level: "Advanced", tag: "Styling" },
       { name: "Tailwind CSS", level: "Advanced", tag: "Styling" },
       { name: "Bootstrap", level: "Advanced", tag: "UI" },
       { name: "jQuery", level: "Proficient", tag: "DOM" }
     ]
   },
   {
-    category: "Backend & Frameworks",
+    category: "Backend & AI Integration",
     skills: [
-      { name: "Java Spring", level: "Advanced", tag: "Enterprise" },
       { name: "Node.js", level: "Advanced", tag: "Runtime" },
-      { name: "RESTful APIs", level: "Advanced", tag: "Architecture" },
-      { name: "Laravel", level: "Advanced", tag: "Framework" }
+      { name: "PHP", level: "Advanced", tag: "Backend" },
+      { name: "Java", level: "Advanced", tag: "Backend/OOP" },
+      { name: "Spring", level: "Advanced", tag: "Enterprise" },
+      { name: "AI API Integration", level: "Advanced", tag: "LLM" },
+      { name: "AI-Powered Chatbot Development", level: "Advanced", tag: "Agents" }
     ]
   },
   {
-    category: "Databases & Cloud",
+    category: "Databases & BaaS",
     skills: [
       { name: "PostgreSQL", level: "Advanced", tag: "Relational" },
       { name: "MySQL", level: "Advanced", tag: "Relational" },
       { name: "MSSQL", level: "Proficient", tag: "Enterprise" },
-      { name: "Supabase", level: "Proficient", tag: "BaaS" },
-      { name: "Firebase", level: "Proficient", tag: "Realtime" }
+      { name: "Firebase", level: "Proficient", tag: "Realtime" },
+      { name: "Supabase", level: "Proficient", tag: "BaaS" }
     ]
   },
   {
-    category: "AI & Integration",
-    skills: [
-      { name: "AI API Integration", level: "Advanced", tag: "LLM" },
-      { name: "AI Chatbot Development", level: "Advanced", tag: "Agents" }
-    ]
-  },
-  {
-    category: "Tools & Workflow",
+    category: "Tools, Design & Agile",
     skills: [
       { name: "Git", level: "Advanced", tag: "VCS" },
-      { name: "GitHub / GitLab", level: "Advanced", tag: "Remote/CI" },
+      { name: "GitHub", level: "Advanced", tag: "VCS" },
+      { name: "GitLab", level: "Advanced", tag: "CI/CD" },
       { name: "Figma", level: "Proficient", tag: "Design" },
-      { name: "Trello / Asana (Kanban)", level: "Advanced", tag: "Agile" }
+      { name: "Canva", level: "Proficient", tag: "Design" },
+      { name: "Trello & Asana", level: "Advanced", tag: "Agile" },
+      { name: "Kanban", level: "Advanced", tag: "Methodology" },
+      { name: "Microsoft Office", level: "Proficient", tag: "Productivity" }
     ]
   }
 ];`;
